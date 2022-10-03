@@ -35,8 +35,14 @@ img {
 
 p {
     color: var(--txt-color-primary);
-    font-weight: 600;
     line-height: 2;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--txt-color-primary);
 }
 
 h4 {
@@ -45,6 +51,10 @@ h4 {
 
 h3 {
     font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.85rem;
 }
 
 .container {
@@ -157,6 +167,7 @@ h3 {
 
 .app__card__text {
     margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .app__card__button {
@@ -264,7 +275,6 @@ section.strategy {
 
 .strategy__text {
     color: white;
-    font-weight: 400;
 }
 
 .strategy__card {
@@ -288,7 +298,6 @@ section.strategy {
 .strategy__card__text {
     margin: 1rem 0;
     font-style: italic;
-    font-weight: 500;
 }
 
 .strategy__card__button {
@@ -333,5 +342,90 @@ section.strategy {
     .strategy__card__img {
         max-width: 250px;
     }
+}
 
+/* --------- TESTIMONIAL SECTION --------- */
+.testimonials .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials__subtitle {
+    margin-bottom: 2rem;
+}
+
+.testimonials__title {
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonials__text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonials__column {
+    display:flex;
+    flex-direction: column;
+    row-gap: var(--gap-flex);
+}
+
+.testimonials__cards {
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 40px;
+}
+
+.testimonials__img {
+    max-width: 200px;
+}
+
+.testimonials__img img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.testimonials__quote {
+    color:white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.testimonials__quote::before {
+    content: '\275D ';
+    font-size: 20px;
+}
+
+.testimonials__quote::after {
+    content: ' \275E';
+    font-size: 20px;
+}
+
+.testimonials__name {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 769px) {
+    .testimonials__cards {
+        flex-direction: row;
+        gap: var(--gap-flex);
+    }
+
+    .testimonials__img {
+        margin-right: 1.5rem;
+    }
+
+    .testimonials__quote, .testimonials__name {
+        text-align: left;
+    }
 }
