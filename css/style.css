@@ -1,0 +1,88 @@
+:root {
+    --color-blue: #0084FD;
+    --txt-color-primary: #5A6E7F;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------- GENERAL STYLES --------- */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ------------ HEADER -------------- */
+.header__nav {
+    background-color: var(--color-blue);
+    position: fixed;
+    height: 4.65rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header__nav-desktop {
+    display: none;
+}
+
+.header__nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header__nav-mobile {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+    .header__nav .container .header__nav-desktop {
+        display: flex;
+        column-gap: 1rem;
+        list-style: none;
+    }
+    
+    .header__link {
+        color: white;
+        padding: 1rem .5rem;
+    }
+    
+    .header__link:hover {
+        text-decoration: underline;
+    }
+    
+    .header__link.btn-header {  /* button header  */
+        background-color: white;
+        color: black;
+        padding: .5rem 1rem;
+        border-radius: 30px;
+        white-space: nowrap;
+        transition-duration: .2s;
+    }
+    
+    .header__link.btn-header:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-decoration: none;
+    }
+
+    .header__nav-mobile {
+        display: none;
+    }
+}
