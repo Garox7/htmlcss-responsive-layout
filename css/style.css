@@ -1,6 +1,7 @@
 :root {
-    --bg-blue: #0084FD;
-    --bg-azure: #B5DDFF;
+    --blue: #0084FD;
+    --azure: #B5DDFF;
+    --purple: #9792E4;
     --txt-color-primary: #5A6E7F;
 
     /* margin/padding/spacer/gap  */
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-    margin-top: calc(var(--height-header) + 40px);
+    margin-top: calc(var(--height-header) + 4rem);
 }
 
 /* -------- GENERAL STYLES --------- */
@@ -42,10 +43,20 @@ h4 {
     font-size: 1.5rem;
 }
 
+h3 {
+    font-size: 1.75rem;
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 2.5rem;
+}
+
+.container-sml {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
 }
 
 .section-spacer {
@@ -54,7 +65,7 @@ h4 {
 
 /* ------------ HEADER -------------- */
 .header__nav {
-    background-color: var(--bg-blue);
+    background-color: var(--blue);
     position: fixed;
     height: var(--height-header);
     top: 0;
@@ -128,8 +139,8 @@ h4 {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-azure);
-    padding: 2rem;
+    background-color: var(--azure);
+    padding: 1.5rem;
     border-radius: 20px;
 }
 
@@ -139,7 +150,7 @@ h4 {
 }
 
 .app__card__title {
-    color: var(--bg-blue);
+    color: var(--blue);
     margin-bottom: 1.5rem;
 }
 
@@ -149,7 +160,7 @@ h4 {
 }
 
 .app__card__button {
-    background-color: var(--bg-blue);
+    background-color: var(--blue);
     display: block;
     color: white;
     font-size: 1.2rem;
@@ -159,6 +170,11 @@ h4 {
     border-radius: 30px;
     max-width: 230px;
     margin-bottom: 2rem;
+    transition-duration: .2s;
+}
+
+.app__card__button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .app__card__button .fa-apple {
@@ -176,7 +192,7 @@ h4 {
  }
  
  .app__card.card__small i {  
-    color: var(--bg-blue);
+    color: var(--blue);
     font-size: 80px;
     margin-bottom: 1.5rem;
 }
@@ -222,4 +238,100 @@ HO PREFERITO INVECE RIEMPIRE CON L'IMMAGINE LO SPAZIO A SINISTRA DELLA "CARD" FI
         flex: 1 0 50%;
         align-self: flex-end;
     }
+}
+
+/* ------------ SECTION STRATEGY -------------- */
+section.strategy {
+    background-color: var(--purple);
+    padding: 4rem 0;
+}
+
+.strategy .container-sml {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-flex);
+}
+
+.strategy__img {
+    /* max-width: 450px; */
+    margin-bottom: 3rem;
+}
+
+.strategy__title {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.strategy__text {
+    color: white;
+    font-weight: 400;
+}
+
+.strategy__card {
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strategy__card__img {
+    /* max-width: 450px; */
+    margin-bottom: 1rem;
+}
+
+.strategy__card__title, .strategy__card__text {
+    text-align: center;
+}
+
+.strategy__card__text {
+    margin: 1rem 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.strategy__card__button {
+    background-color: var(--purple);
+    color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 376px) {
+    .strategy__title {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 811px) {
+    .strategy .container-sml {
+        flex-direction: row;
+        justify-content: center;
+        gap: calc(var(--gap-flex) + 2rem);
+    }
+
+    .strategy__plan {
+        flex-basis: 50%;
+    }
+
+    .strategy__img {
+        max-width: 400px;
+        margin-bottom: 5rem;
+    }
+
+    .strategy__title {
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+    }
+
+    .strategy__card{
+        align-self: flex-end;
+        flex-basis: 50%;
+    }
+
+    .strategy__card__img {
+        max-width: 250px;
+    }
+
 }
