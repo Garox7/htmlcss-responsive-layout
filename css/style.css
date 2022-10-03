@@ -57,6 +57,10 @@ h2 {
     font-size: 1.85rem;
 }
 
+h1 {
+    font-size: 2.65rem;
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -280,14 +284,13 @@ section.strategy {
 .strategy__card {
     background-color: #fff;
     border-radius: 40px;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .strategy__card__img {
-    /* max-width: 450px; */
     margin-bottom: 1rem;
 }
 
@@ -427,5 +430,66 @@ section.strategy {
 
     .testimonials__quote, .testimonials__name {
         text-align: left;
+    }
+}
+
+/* --------- BENEFITS SECTION -------- */
+section.benefits {
+    background-color: var(--purple);
+    padding: 4rem 0;
+}
+
+.benefits__title {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.benefits__columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--gap-flex);
+}
+
+.benefits__cards {
+    background-color: white;
+    border-radius: 45px;
+    padding: 2rem;
+}
+
+.benefits__step {
+    color: var(--purple);
+    margin-bottom: 2rem;
+}
+
+.benefits__subtitle {
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+}
+
+.benefits__btn {
+    display: inline-block;
+    background-color: var(--purple);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: .5rem 3rem;
+    margin: 1.5rem 0 0;
+    transition-duration: .2s;
+}
+.benefits__btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 376px) {
+    .benefits__cards {
+        flex: 1 1 calc((100% / 2) - var(--gap-flex))
+    }
+}
+
+@media screen and (min-width: 811px) {
+    .benefits__cards {
+        flex: 1 1 calc((100% / 3) - var(--gap-flex) * 2)
     }
 }
