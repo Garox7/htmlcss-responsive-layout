@@ -2,6 +2,8 @@
     --blue: #0084FD;
     --azure: #B5DDFF;
     --purple: #9792E4;
+    --gold: #FDC15F;
+    --black: #333; 
     --txt-color-primary: #5A6E7F;
 
     /* margin/padding/spacer/gap  */
@@ -25,18 +27,11 @@ body {
 }
 
 /* -------- GENERAL STYLES --------- */
-a {
-    text-decoration: none;
-}
+a {text-decoration: none;}
 
-img {
-    width: 100%;
-}
+img { width: 100%;}
 
-p {
-    color: var(--txt-color-primary);
-    line-height: 2;
-}
+p {color: var(--txt-color-primary);line-height: 2;}
 
 h5 {font-size: 1.2rem;font-weight: 400;text-transform: uppercase;color: var(--txt-color-primary);}
 
@@ -155,7 +150,6 @@ h1 {font-size: 2.65rem;}
     margin-bottom: 1.5rem;
 }
 
-
 .app__card__text {
     margin-bottom: 2rem;
     font-weight: 600;
@@ -184,7 +178,7 @@ h1 {font-size: 2.65rem;}
 }
 
 .app__card__img {
-    max-width: 450px;
+    max-width: 350px;
     margin-bottom: -.2rem;
 }
 
@@ -225,7 +219,7 @@ HO PREFERITO INVECE RIEMPIRE CON L'IMMAGINE LO SPAZIO A SINISTRA DELLA "CARD" FI
 
 @media screen and (min-width: 811px) {
     .app__card.card__big {
-        flex: 1 1 calc((2 / 3) * 100% - var(--gap-flex));
+        flex: 1 1 calc((2 / 3) * (100% - var(--gap-flex)));
     }
 
     .app__card.card__small {
@@ -543,4 +537,73 @@ section.benefits {
     .about-us__ceo {
         flex: 0 0 250px;
     }
+}
+
+/* ---------- CTA SECTION ---------*/
+section.cta {
+    background-color: var(--purple);
+    padding: 4rem 0;
+}
+
+.cta .container {
+    max-width: 500px;
+    text-align: center;
+}
+
+.cta__subtitle {
+    color: rgba(255, 255, 255, .8);
+    margin-bottom: 1rem;
+}
+
+h2.cta__h2, 
+p.cta__text,
+.cta__copyright,
+.cta__classe,
+.cta__privacy-policy {
+    color: white;
+}
+
+h2.cta__h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+h1.cta__title {
+    color: var(--gold);
+    text-transform: capitalize;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+p.cta__text {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.cta__btn {
+    background-color: white;
+    color: var(--purple);
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: 1.5rem;
+    border-radius: 35px;
+    margin-bottom: 1rem;
+    transition-duration: .2s;
+}
+
+.cta__btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cta__copyright::after, .cta__classe::after {
+    content: " \00B7 ";
+    font-size: 35px;
+    vertical-align:sub;
+}
+
+.cta__privacy-policy {
+    text-decoration: underline;
 }
