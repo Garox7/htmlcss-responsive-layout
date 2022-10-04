@@ -38,28 +38,15 @@ p {
     line-height: 2;
 }
 
-h5 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--txt-color-primary);
-}
+h5 {font-size: 1.2rem;font-weight: 400;text-transform: uppercase;color: var(--txt-color-primary);}
 
-h4 {
-    font-size: 1.5rem;
-}
+h4 {font-size: 1.5rem;}
 
-h3 {
-    font-size: 1.75rem;
-}
+h3 {font-size: 1.75rem;}
 
-h2 {
-    font-size: 1.85rem;
-}
+h2 {font-size: 1.85rem;}
 
-h1 {
-    font-size: 2.65rem;
-}
+h1 {font-size: 2.65rem;}
 
 .container {
     max-width: 1120px;
@@ -491,5 +478,69 @@ section.benefits {
 @media screen and (min-width: 811px) {
     .benefits__cards {
         flex: 1 1 calc((100% / 3) - var(--gap-flex) * 2)
+    }
+}
+/* ---------- ABOUT US SECTION ---------- */
+.about-us .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-us__title {
+    color: var(--purple);
+    margin-bottom: 2rem;
+}
+
+.about-us__text {
+    margin-bottom: 2rem;
+}
+
+.about-us__img {
+    max-width: 200px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-us__img img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.about-us__quote--mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 80px;
+    color: var(--purple);
+}
+
+.about-us__quote {
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+}
+
+.about-us__linkedin {
+    background-color: var(--purple);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+    transition-duration: .2s;
+}
+
+.about-us__linkedin:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 811px) {
+    .about-us__paragraph {
+        flex: 0 1 60%;
+    }    
+
+    .about-us__ceo {
+        flex: 0 0 250px;
     }
 }
