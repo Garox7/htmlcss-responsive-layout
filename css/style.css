@@ -55,6 +55,13 @@ h1 {font-size: 2.65rem;}
     padding: 0 2.5rem;
 }
 
+.container-footer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    text-align: center;
+}
+
 .section-spacer {
     margin-bottom: var(--section-spacer);
 }
@@ -545,11 +552,6 @@ section.cta {
     padding: 4rem 0;
 }
 
-.cta .container {
-    max-width: 500px;
-    text-align: center;
-}
-
 .cta__subtitle {
     color: rgba(255, 255, 255, .8);
     margin-bottom: 1rem;
@@ -607,3 +609,23 @@ p.cta__text {
 .cta__privacy-policy {
     text-decoration: underline;
 }
+
+/*-------- FOOTER ------- */
+footer {
+    background-color: var(--black);
+    padding: 4rem 0;
+}
+
+p.footer__text,
+p.footer__signature {
+    color: white;
+}
+
+p.footer__text {
+    margin-bottom: 3rem;
+}
+
+.footer__signature a {
+    color: var(--purple);
+}
+
